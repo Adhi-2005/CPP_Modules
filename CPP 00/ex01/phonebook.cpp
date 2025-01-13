@@ -10,15 +10,50 @@ class Contact
 	public:
 		void fillContacts() {
 			std::cout<<"Enter First Name: ";
-			std::getline(std::cin, firstName);
+			while(true)
+			{
+				std::getline(std::cin, firstName);
+				if (firstName.empty())
+					continue;
+				else
+					break;
+			}
 			std::cout<<"Enter Last Name: ";
-			std::getline(std::cin, lastName);
+			while(true)
+			{
+				std::getline(std::cin, lastName);
+				if (lastName.empty())
+					continue;
+				else
+					break;
+			}
 			std::cout<<"Enter Nickname: ";
-			std::getline(std::cin, nickName);
+			while(true)
+			{
+				std::getline(std::cin, nickName);
+				if (nickName.empty())
+					continue;
+				else
+					break;
+			}
 			std::cout<<"Enter Phone Number: ";
-			std::getline(std::cin, phoneNumber);
+			while(true)
+			{
+				std::getline(std::cin, phoneNumber);
+				if (phoneNumber.empty())
+					continue;
+				else
+					break;
+			}
 			std::cout<<"Enter Darkest Secret: ";
-			std::getline(std::cin, darkestSecret);
+			while(true)
+			{
+				std::getline(std::cin, darkestSecret);
+				if (darkestSecret.empty())
+					continue;
+				else
+					break;
+			}
 		}
 		
 		std::string getFirstName() const{ return firstName; }
@@ -70,12 +105,14 @@ class PhoneBook
 						<<std::setw(10) << truncate(contacts[i].getFirstName()) << "|"
 						<<std::setw(10) << truncate(contacts[i].getLastName()) << "|"
 						<<std::setw(10) << truncate(contacts[i].getNickName()) << "\n";
-			} 
+			}
+
+
 			int index;
 			std::cout<< "Enter index of contact to display: ";
-			std::cin>> index;
+			std::cin>>index;
 			std::cin.ignore();
-
+		
 			if (index < 0 || index >= contactCount){
 				std::cout<< "Invalid Index. \n";
 			}else{
@@ -86,7 +123,6 @@ class PhoneBook
 				std::cout<< "Phone Number: "<< contact.getPhoneNumber() << "\n";
 				std::cout<< "Darkest Secret: "<< contact.getDarkestSecret() << "\n";
 			}
-
 		}
 };
 
