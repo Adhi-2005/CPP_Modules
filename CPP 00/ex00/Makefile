@@ -1,15 +1,19 @@
 NAME = megaphone
-CXXFLAGS = C++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CC = c++
 SRC = megaphone.cpp
 
-OBJ = ${SRC:%.cpp=%.0}
+OBJ = ${SRC:%.cpp=%.o}
 
-all; ${NAME}
-	${CC} ${CXXFLAGS} ${OBJ} -o ${NAME}
+all: ${NAME}
+
+${NAME}:${OBJ}
+		${CC} ${CXXFLAGS} ${OBJ} -o $(NAME)
 
 fclean: clean
 	@rm -rf ${NAME}
 
-clean: @rm -rf ${OBJ}
+clean:
+	@rm -rf ${OBJ}
 
 re: fclean all

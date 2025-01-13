@@ -1,13 +1,6 @@
-#define _GLIBCXX_USE_C99 1
-#include <cstdio>
-#include <cstdlib>
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include <cwchar>
-#include <cctype>
-
-
 
 class Contact
 {

@@ -1,11 +1,13 @@
 NAME = phonebook
 
-SRCS = main.cpp
+SRCS = phonebook.cpp
 OBJS = $(SRCS:.cpp=.o)
-CXX = c++
+CC = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-all: $(NAME)$(NAME): $(OBJS)
+all: $(NAME)
+
+$(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
