@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adhil <adhil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:30:38 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/13 12:30:39 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/01/14 22:17:01 by adhil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(int ac, char **av)
 	{
 		while (av[i])
 		{
+			j = 0;
 			while(av[i][j])
 			{
 				std::cout<< (char)toupper(av[i][j]);
