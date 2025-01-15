@@ -6,7 +6,7 @@
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:47:55 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/13 15:02:40 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/01/15 12:00:21 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ void Contact::fillContacts() {
 	while(true)
 	{
 		std::getline(std::cin, firstName);
+		if (std::cin.eof()) {
+			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
+			exit(0);
+		}
 		if (firstName.empty())
 			continue;
 		else
@@ -28,6 +32,10 @@ void Contact::fillContacts() {
 	while(true)
 	{
 		std::getline(std::cin, lastName);
+		if (std::cin.eof()) {
+			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
+			exit(0);
+		}
 		if (lastName.empty())
 			continue;
 		else
@@ -37,6 +45,10 @@ void Contact::fillContacts() {
 	while(true)
 	{
 		std::getline(std::cin, nickName);
+		if (std::cin.eof()) {
+			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
+			exit(0);
+		}
 		if (nickName.empty())
 			continue;
 		else
@@ -46,6 +58,10 @@ void Contact::fillContacts() {
 	while(true)
 	{
 		std::getline(std::cin, phoneNumber);
+		if (std::cin.eof()) {
+			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
+			exit(0);
+		}
 		if (phoneNumber.empty())
 			continue;
 		else
@@ -55,6 +71,10 @@ void Contact::fillContacts() {
 	while(true)
 	{
 		std::getline(std::cin, darkestSecret);
+		if (std::cin.eof()) {
+			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
+			exit(0);
+		}
 		if (darkestSecret.empty())
 			continue;
 		else

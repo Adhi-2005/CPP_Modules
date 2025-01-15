@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   phoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:06:32 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/13 15:19:12 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/01/15 13:48:08 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,10 @@ void PhoneBook::searchContacts() const {
 	std::cout<< "Enter index of contact to display: ";
 	std::cin>>index;
 	std::cin.ignore();
+	if (std::cin.eof()) {
+			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
+			exit(0);
+	}
 
 	if (index < 0 || index >= contactCount){
 		std::cout<< "Invalid Index. \n";
