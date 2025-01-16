@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contacts.cpp                                       :+:      :+:    :+:   */
+/*   Contacts.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adhil <adhil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:47:55 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/15 12:00:21 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/01/16 10:58:33 by adhil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contacts.hpp"
+#include "Contacts.hpp"
 
 Contact::Contact() : firstName(""), lastName(""), nickName(""), phoneNumber(""), darkestSecret("") {}
 

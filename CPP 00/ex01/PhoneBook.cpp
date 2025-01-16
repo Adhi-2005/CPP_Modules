@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phoneBook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adhil <adhil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:06:32 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/15 13:48:08 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/01/16 10:58:28 by adhil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phoneBook.hpp"
+#include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook() : oldestIndex(0), contactCount(0) {}
 
@@ -48,7 +48,7 @@ void PhoneBook::searchContacts() const {
 	std::cin.ignore();
 	if (std::cin.eof()) {
 			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
-			exit(0);
+			exit(1);
 	}
 
 	if (index < 0 || index >= contactCount){
