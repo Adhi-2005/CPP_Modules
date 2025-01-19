@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adhil <adhil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:35:54 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/13 15:20:45 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/01/16 10:59:21 by adhil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 # include <iostream>
 # include <iomanip>
 # include <string>
+# include <stdlib.h>
 
-# include "contacts.hpp"
+# include "Contacts.hpp"
 
 class PhoneBook
 {
