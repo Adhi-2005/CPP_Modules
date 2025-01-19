@@ -6,7 +6,7 @@
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:47:55 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/15 12:00:21 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:35:30 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 Contact::Contact() : firstName(""), lastName(""), nickName(""), phoneNumber(""), darkestSecret("") {}
 
 void Contact::fillContacts() {
+	
+	//Here we add the details to store in the contacts.
 	std::cout<<"Enter First Name: ";
 	while(true)
 	{
