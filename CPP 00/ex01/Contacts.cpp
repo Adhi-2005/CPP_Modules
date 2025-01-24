@@ -6,7 +6,7 @@
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:47:55 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/19 12:18:55 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/01/24 18:55:11 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ Contact::Contact() : firstName(""), lastName(""), nickName(""), phoneNumber(""),
 
 void Contact::fillContacts() {
 	
-	//Here we add the details to store in the contacts.
-	std::cout<<"Enter First Name: ";
+	//ENTER THE FIRST NAME
 	while(true)
 	{
+		std::cout<<"Enter First Name: ";
 		std::getline(std::cin, firstName);
 		if (std::cin.eof()) {
 			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
@@ -30,9 +30,10 @@ void Contact::fillContacts() {
 		else
 			break;
 	}
-	std::cout<<"Enter Last Name: ";
+	//ENTER THE LAST NAME
 	while(true)
 	{
+		std::cout<<"Enter Last Name: ";
 		std::getline(std::cin, lastName);
 		if (std::cin.eof()) {
 			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
@@ -43,9 +44,10 @@ void Contact::fillContacts() {
 		else
 			break;
 	}
-	std::cout<<"Enter Nickname: ";
+	//ENTER THE NICKNAME
 	while(true)
 	{
+		std::cout<<"Enter Nickname: ";
 		std::getline(std::cin, nickName);
 		if (std::cin.eof()) {
 			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
@@ -56,22 +58,31 @@ void Contact::fillContacts() {
 		else
 			break;
 	}
-	std::cout<<"Enter Phone Number: ";
+	//ENTER THE PHONE NUMBER
 	while(true)
 	{
+		std::cout<<"Enter Phone Number: ";
 		std::getline(std::cin, phoneNumber);
 		if (std::cin.eof()) {
 			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
 			exit(0);
 		}
-		if (phoneNumber.empty())
+		if (phoneNumber.find_first_not_of("0123456789") != std::string::npos)
+		{
+			std::cout<< "Invalid input. Please Enter Numbers\n";
 			continue;
-		else
-			break;
+		}
+		if (phoneNumber.empty())
+		{
+			std::cout << "Phone number can't be empty.";
+			continue;
+		}
+		break;
 	}
-	std::cout<<"Enter Darkest Secret: ";
+	//ENTER THE DARKEST SECRET
 	while(true)
 	{
+		std::cout<<"Enter Darkest Secret: ";
 		std::getline(std::cin, darkestSecret);
 		if (std::cin.eof()) {
 			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";

@@ -6,7 +6,7 @@
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:06:32 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/19 12:19:07 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/01/24 18:40:22 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,28 @@ void PhoneBook::searchContacts() const {
 	}
 
 
-	int index;
-	std::cout<< "Enter index of contact to display: ";
-	std::cin>>index;
-	std::cin.ignore();
-	if (std::cin.eof()) {
+	std::string input;
+	int index = -1;
+	while (true) {
+		std::cout << "Enter index of contact to display: ";
+		std::getline(std::cin, input);
+
+		if (std::cin.eof()) {
 			std::cout << "\nCtrl+D detected. Exiting PhoneBook...\n";
 			exit(1);
+		}
+		if (input.find_first_not_of("0123456789") != std::string::npos) {
+			std::cout << "Invalid input. Please enter a number between 0 and " << contactCount - 1 << ".\n";
+			continue;
+		}
+		index = std::atoi(input.c_str());
+		if (index < 0 || index >= contactCount) {
+			std::cout << "Invalid Index. Please enter a valid index.\n";
+			continue;
+		}
+		break;
 	}
+
 
 	if (index < 0 || index >= contactCount){
 		std::cout<< "Invalid Index. \n";
