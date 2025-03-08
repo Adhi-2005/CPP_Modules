@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 15:58:49 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/24 13:04:03 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/03/08 14:40:13 by adhi-2005        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,42 @@ void Harl::error(void)
 	std::cout << "This is unacceptable! I want to speak to the manager now.\n";
 }
 
-void Harl::complain(std::string level){
-	typedef void (Harl::*HarlFunc)(void);
-	HarlFunc functions[] = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+void Harl::complain(std::string level) {
+	int levelCode = -1;
 
-	std::string levels[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
-	int i = 0;
-	while (i < 4)
-	{
-		if (levels[i] == level)
-		{
-			(this->*functions[i])();
-			return;
-		}
-		i++;
+	switch (level[0]) {
+		case 'D':
+			if (level == "DEBUG") levelCode = 0;
+			break;
+		case 'I':
+			if (level == "INFO") levelCode = 1;
+			break;
+		case 'W':
+			if (level == "WARNING") levelCode = 2;
+			break;
+		case 'E':
+			if (level == "ERROR") levelCode = 3;
+			break;
+		default:
+			levelCode = -1;
+			break;
 	}
-	std::cout << "No complaints for Harl in this level\n";
+
+	switch (levelCode) {
+		case 0:
+			this->debug();
+			break;
+		case 1:
+			this->info();
+			break;
+		case 2:
+			this->warning();
+			break;
+		case 3:
+			this->error();
+			break;
+		default:
+			std::cout << "No complaints for Harl in this level\n";
+			break;
+	}
 }
