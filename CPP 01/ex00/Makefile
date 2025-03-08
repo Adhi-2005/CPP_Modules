@@ -1,7 +1,7 @@
 NAME = ZombieAhead
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
-SRC = Main.cpp NewZombie.cpp RandomChump.cpp Zombie.cpp
+SRC = main.cpp NewZombie.cpp RandomChump.cpp Zombie.cpp
 
 OBJ = ${SRC:%.cpp=%.o}
 
