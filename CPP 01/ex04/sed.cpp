@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sed.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 11:23:49 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/23 14:14:07 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/03/08 13:16:24 by adhi-2005        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ void Replace::processFile() const{
 	}
 	std::ifstream inputFile(filename);
 	if (!inputFile.is_open()){
-		std::cerr<< "Error: Can't open the file";
+		std::cerr<< "Error: Can't open the file\n";
 		return ;
 	}
 	std::ofstream outputFile(filename + ".replace");
 	if (!outputFile.is_open())
 	{
-		std::cerr<< "Error: Can't Create the file";
+		std::cerr<< "Error: Can't Create the file\n";
 		return ;
 	}
 
@@ -50,5 +50,5 @@ void Replace::processFile() const{
 	}
 	inputFile.close();
 	outputFile.close();
-	std::cout<< "File Processed Successfully...";
+	std::cout<< "File Processed Successfully...\n";
 }
