@@ -6,7 +6,7 @@
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 11:53:05 by adhil             #+#    #+#             */
-/*   Updated: 2025/01/23 10:11:31 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/03/08 10:33:19 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Weapon{
 		Weapon(const std::string &initialType);
 		const std::string& getType() const;
 		void setType(std::string newType);
-		~Weapon();
 };
 
 #endif

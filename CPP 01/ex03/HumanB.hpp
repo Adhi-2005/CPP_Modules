@@ -6,7 +6,7 @@
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 14:01:19 by adhil             #+#    #+#             */
-/*   Updated: 2025/01/22 13:03:59 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/03/08 11:07:15 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,9 @@ class HumanB{
 		Weapon* weapon;
 
 	public:
-		HumanB(const std::string &name);
-		HumanB(const std::string &name, Weapon *weapon);
-
-		void attack()const;
+		HumanB(std::string name);
 		void setWeapon(Weapon& newWeapon);
-
+		void attack()const;
 };
 
 #endif
