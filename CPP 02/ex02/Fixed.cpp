@@ -6,7 +6,7 @@
 /*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 19:15:08 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/02/07 19:55:37 by adhi-2005        ###   ########.fr       */
+/*   Updated: 2025/03/10 15:02:55 by adhi-2005        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ const Fixed& Fixed::max(const Fixed& a, const Fixed& b) {
 }
 
 int Fixed::toInt() const{
-	return value >> fractionalBits;
+	return value / (1 << fractionalBits);
 }
 
 float Fixed::toFloat() const{

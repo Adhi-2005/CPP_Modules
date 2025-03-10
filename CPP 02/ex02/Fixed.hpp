@@ -29,7 +29,7 @@ class Fixed {
 		Fixed();
 		Fixed(const int intValue);
 		Fixed(const float floatValue);
-		Fixed(const Fixed& other);
+		Fixed(const Fixed &other);
 		~Fixed();
 
 		Fixed& operator=(const Fixed& other);
