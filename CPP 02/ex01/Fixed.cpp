@@ -6,7 +6,7 @@
 /*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 13:42:39 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/02/07 17:14:18 by adhi-2005        ###   ########.fr       */
+/*   Updated: 2025/03/10 12:35:47 by adhi-2005        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ float Fixed::toFloat() const{
 }
 
 int Fixed::toInt()const{
-	return fixedPointValue >> fractionalBits;
+	return fixedPointValue / (1 << fractionalBits);
 }
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
