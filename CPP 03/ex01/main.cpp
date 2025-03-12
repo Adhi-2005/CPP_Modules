@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 00:54:57 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/02/08 07:19:46 by adhi-2005        ###   ########.fr       */
+/*   Updated: 2025/03/12 12:34:47 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 
 int main() {
-	ClapTrap clap("Clappy");
-	ScavTrap scav("Scavvy");
+	ClapTrap ct("Clappy");
+	ScavTrap st("Scavy");
 
-	clap.attack("Enemy1");
-	scav.attack("Enemy2");
-
-	clap.takeDamage(5);
-	scav.takeDamage(30);
-
-	clap.beRepaired(3);
-	scav.beRepaired(10);
-
-	scav.guardGate();
+	std::cout << "\n=== Testing ClapTrap ===" << std::endl;
+	ct.attack("Bandit");
+	ct.takeDamage(3);
+	ct.beRepaired(2);
+	
+	std::cout << "\n=== Testing ScavTrap ===" << std::endl;
+	st.attack("Bandit");
+	st.takeDamage(30);
+	st.beRepaired(15);
+	st.guardGate();
 
 	return 0;
 }
