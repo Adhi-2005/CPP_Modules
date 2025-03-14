@@ -6,13 +6,13 @@
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 23:14:29 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/03/14 16:53:02 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/03/14 17:42:05 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string const& name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
+ClapTrap::ClapTrap(std::string const& name) : name(name), hitPoints(100), energyPoints(50), attackDamage(20) {
 	std::cout << "ClapTrap " << this->name << " has entered the battlefield!\n";
 }
 
