@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 23:14:29 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/02/08 06:53:25 by adhi-2005        ###   ########.fr       */
+/*   Updated: 2025/03/14 16:53:07 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,23 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	this->energyPoints--;
 	this->hitPoints += amount;
 	std::cout << "ClapTrap " << this->name << " repairs itself, recovering " << amount << " hit points, hit points are now " << this->hitPoints << "\n";
+}
+
+ClapTrap::ClapTrap(const ClapTrap &other)
+{
+	std::cout<< "Copy Constructor Called\n";
+	*this = other;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+{
+	std::cout<< "Copy assignment operator called\n";
+	if (this != &other)
+	{
+		name = other.name;
+		hitPoints = other.hitPoints;
+		energyPoints = other.energyPoints;
+		attackDamage = other.attackDamage;
+	}
+	return (*this);
 }
