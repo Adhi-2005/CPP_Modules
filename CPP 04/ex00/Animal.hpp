@@ -3,29 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:00:55 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/02/08 14:23:17 by adhi-2005        ###   ########.fr       */
+/*   Updated: 2025/03/16 14:58:37 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#define ANIMAL_HPP
 
 #include <iostream>
-#include <string>
 
 class Animal {
-	protected:
-		std::string type;
+protected:
+	std::string type;
 
-	public:
-		Animal();
-		virtual ~Animal();
-
-		virtual void makeSound() const;
-		std::string getType() const;
+public:
+	Animal();
+	Animal(const Animal& other);
+	virtual ~Animal();
+	
+	Animal& operator=(const Animal& other);
+	
+	std::string getType() const;
+	virtual void makeSound() const;
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:40:40 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/02/08 14:42:23 by adhi-2005        ###   ########.fr       */
+/*   Updated: 2025/03/16 15:00:45 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,18 @@
 #include <iostream>
 
 class WrongAnimal {
-	protected:
-		std::string type;
+protected:
+	std::string type;
 
-	public:
-		WrongAnimal();
-		~WrongAnimal();
+public:
+	WrongAnimal();
+	WrongAnimal(const WrongAnimal& other);
+	~WrongAnimal();
 
-		void makeSound() const;
+	WrongAnimal& operator=(const WrongAnimal& other);
+
+	std::string getType() const;
+	virtual void makeSound() const;
 };
 
 #endif

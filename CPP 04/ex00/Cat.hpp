@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:33:51 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/02/08 14:48:53 by adhi-2005        ###   ########.fr       */
+/*   Updated: 2025/03/16 15:03:33 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@
 #include "Animal.hpp"
 
 class Cat : public Animal {
-	public:
-		Cat();
-		~Cat();
-
-		void makeSound() const;
+public:
+	Cat();
+	Cat(const Cat& other);
+	~Cat();
+	
+	Cat& operator=(const Cat& other);
+	
+	void makeSound() const;
 };
 
 #endif

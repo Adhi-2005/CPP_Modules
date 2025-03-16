@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 16:42:57 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/02/08 16:57:15 by adhi-2005        ###   ########.fr       */
+/*   Updated: 2025/03/16 15:03:54 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@
 #include <iostream>
 
 int main() {
-	// Creating an array of Animal pointers
+	
 	Animal* animals[6];
 
-	// Filling the array with Dogs and Cats
+	
 	for (int i = 0; i < 3; i++) {
-		animals[i] = new Dog();  // Create Dog objects
+		animals[i] = new Dog();
 	}
 	for (int i = 3; i < 6; i++) {
-		animals[i] = new Cat();  // Create Cat objects
+		animals[i] = new Cat();
 	}
 
 	// Displaying the type and sound of each animal

@@ -3,27 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:26:21 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/02/08 14:29:28 by adhi-2005        ###   ########.fr       */
+/*   Updated: 2025/03/16 14:35:08 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal() : type("Animal") {
-	std::cout << "Animal constructor called!\n";
+	std::cout << "Animal created\n";
+}
+
+Animal::Animal(const Animal& other) {
+	*this = other;
+	std::cout << "Animal copied\n";
 }
 
 Animal::~Animal() {
-	std::cout << "Animal destructor called!\n";
+	std::cout << "Animal destroyed\n";
 }
 
-void Animal::makeSound() const{
-	std::cout << "Some generic animal sound!\n";
+Animal& Animal::operator=(const Animal& other) {
+	if (this != &other)
+		this->type = other.type;
+	return *this;
 }
 
 std::string Animal::getType() const {
 	return type;
+}
+
+void Animal::makeSound() const {
+	std::cout << "Some generic animal sound\n";
 }

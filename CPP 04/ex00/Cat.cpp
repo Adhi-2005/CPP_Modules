@@ -3,24 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:36:06 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/02/08 14:40:13 by adhi-2005        ###   ########.fr       */
+/*   Updated: 2025/03/16 14:30:16 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(){
+Cat::Cat() {
 	type = "Cat";
-	std::cout << "Cat Constructor Called\n";
+	std::cout << "Cat created\n";
 }
 
-Cat::~Cat(){
-	std::cout << "Cat destructor called\n";
+Cat::Cat(const Cat& other) {
+	*this = other;
+	std::cout << "Cat copied\n";
+}
+
+Cat::~Cat() {
+	std::cout << "Cat destroyed\n";
+}
+
+Cat& Cat::operator=(const Cat& other) {
+	if (this != &other)
+		this->type = other.type;
+	return *this;
 }
 
 void Cat::makeSound() const {
-	std::cout << "Meow!\n";
+	std::cout << "Meow! Meow!\n";
 }

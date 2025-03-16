@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adhi-2005 <adhi-2005@student.42.fr>        +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 15:28:32 by adhi-2005         #+#    #+#             */
-/*   Updated: 2025/02/08 16:17:16 by adhi-2005        ###   ########.fr       */
+/*   Updated: 2025/03/16 14:35:35 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ Brain& Brain::operator=(const Brain& other) {
 }
 
 Brain::~Brain(){
-	std::cout << "Briain Destructor Called!\n";
+	std::cout << "Brain Destructor Called!\n";
 }
