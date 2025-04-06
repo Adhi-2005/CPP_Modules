@@ -6,7 +6,7 @@
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:47:55 by adshafee          #+#    #+#             */
-/*   Updated: 2025/01/24 18:55:11 by adshafee         ###   ########.fr       */
+/*   Updated: 2025/03/17 12:51:42 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void Contact::fillContacts() {
 		}
 		if (phoneNumber.empty())
 		{
-			std::cout << "Phone number can't be empty.";
+			std::cout << "Phone number can't be empty.\n";
 			continue;
 		}
 		break;
