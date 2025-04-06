@@ -4,12 +4,14 @@
 #include <iostream>
 #include <stdexcept>
 
+class Form;
 class Bureaucrat {
 	private:
 		const std::string name;
 		int grade;
 	
 	public:
+		void signForm(Form& form);
 		class GradeTooHighExeption : public std::exception {
 			public:
 				const char* what() const throw();
