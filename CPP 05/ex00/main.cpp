@@ -2,34 +2,32 @@
 
 int main() {
 	try {
-		Bureaucrat john("John Doe", 2);
-		std::cout << john << std::endl;
+		Bureaucrat b1("Adhil", 2);
+		std::cout << b1 << std::endl;
 
-		john.incrementGrade();
-		std::cout << john << std::endl;
+		b1.incrementGrade();
+		std::cout << b1 << std::endl;
 
-		john.incrementGrade(); // Should throw GradeTooHighException
-	} catch (std::exception& e) {
-		std::cerr << "Exception caught: " << e.what() << std::endl;
+		b1.incrementGrade();
+	}
+	catch (std::exception& e) {
+		std::cout << "Exception: " << e.what() << std::endl;
 	}
 
 	try {
-		Bureaucrat jane("Jane Smith", 149);
-		std::cout << jane << std::endl;
+		Bureaucrat b2("Low Rank", 150);
+		std::cout << b2 << std::endl;
 
-		jane.decrementGrade();
-		std::cout << jane << std::endl;
-
-		jane.decrementGrade(); // Should throw GradeTooLowException
-	} catch (std::exception& e) {
-		std::cerr << "Exception caught: " << e.what() << std::endl;
+		b2.decrementGrade();
+	}
+	catch (std::exception& e) {
+		std::cout << "Exception: " << e.what() << std::endl;
 	}
 
 	try {
-		Bureaucrat invalid("Invalid Bureaucrat", 200); // Should throw exception
-	} catch (std::exception& e) {
-		std::cerr << "Exception caught: " << e.what() << std::endl;
+		Bureaucrat b3("Invalid", 200);
 	}
-
-	return 0;
+	catch (std::exception& e) {
+		std::cout << "Exception: " << e.what() << std::endl;
+	}
 }

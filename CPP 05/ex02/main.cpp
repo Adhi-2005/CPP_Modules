@@ -4,19 +4,35 @@
 #include "PresidentialPardonForm.hpp"
 
 int main() {
-	Bureaucrat john("John", 1);
+	Bureaucrat boss("CEO", 1);
+	Bureaucrat intern("Intern", 150);
 
 	ShrubberyCreationForm shrub("Home");
-	RobotomyRequestForm robo("RoboTarget");
-	PresidentialPardonForm pardon("TargetPardon");
+	RobotomyRequestForm robot("Bender");
+	PresidentialPardonForm pardon("Adhil");
 
-	john.signForm(shrub);
-	john.signForm(robo);
-	john.signForm(pardon);
+	std::cout << shrub << std::endl;
+	std::cout << robot << std::endl;
+	std::cout << pardon << std::endl;
 
-	john.executeForm(shrub);
-	john.executeForm(robo);
-	john.executeForm(pardon);
+	try {
+		boss.signForm(shrub);
+		boss.executeForm(shrub);  // Creates a file with ASCII trees
 
-	return 0;
+		boss.signForm(robot);
+		boss.executeForm(robot);  // 50% robotomy success
+
+		boss.signForm(pardon);
+		boss.executeForm(pardon);  // Adhil gets pardoned
+	}
+	catch (std::exception& e) {
+		std::cout << "Exception: " << e.what() << std::endl;
+	}
+
+	try {
+		intern.executeForm(shrub);  // Should throw (grade too low)
+	}
+	catch (std::exception& e) {
+		std::cout << "Exception: " << e.what() << std::endl;
+	}
 }
