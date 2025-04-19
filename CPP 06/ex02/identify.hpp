@@ -1,5 +1,5 @@
 #ifndef IDENTIFY_HPP
-#define IDENTFIY_HPP
+# define IDENTIFY_HPP
 
 #include "Base.hpp"
 
