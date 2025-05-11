@@ -1,3 +1,5 @@
+#include "Array.hpp"
+
 template <typename T>
 Array<T>::Array() : _data(NULL), _size(0) {}
 
@@ -9,7 +11,6 @@ Array<T>::Array(const Array<T>& other) : _data(NULL), _size(0) {
 	*this = other;
 }
 
-// Assignment operator
 template <typename T>
 Array<T>& Array<T>::operator=(const Array<T>& other) {
 	if (this != &other) {
